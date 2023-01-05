@@ -2,7 +2,6 @@ import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
 import Image from "next/image";
 import { IconLink } from "@tabler/icons";
-import Link from "next/link";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -21,11 +20,7 @@ const config: DocsThemeConfig = {
     icon: null,
   },
   feedback: {
-    content: (
-      <Link href="https://getisla.com/u/romeo/product-improvement">
-        Question? Give us feedback!
-      </Link>
-    ),
+    content: null,
   },
   footer: {
     text: "Your hub to send and receive work requests.",
