@@ -1,18 +1,36 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig } from "nextra-theme-docs";
+import Image from "next/image";
+import { IconLink } from "@tabler/icons";
+import Link from "next/link";
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: (
+    <Image
+      alt="Isla Logo"
+      src="https://getisla.com/logos/isla.png"
+      height={27}
+      width={50}
+    />
+  ),
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://getisla.com",
+    icon: IconLink,
   },
   chat: {
-    link: 'https://discord.com',
+    icon: null,
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  feedback: {
+    content: (
+      <Link href="https://getisla.com/u/romeo/product-improvement">
+        Question? Give us feedback!
+      </Link>
+    ),
+  },
   footer: {
-    text: 'Nextra Docs Template',
+    text: "Your hub to send and receive work requests.",
   },
-}
+  editLink: { component: null },
+};
 
-export default config
+export default config;
