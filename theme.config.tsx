@@ -1,7 +1,6 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import Image from "next/image";
-import { IconLink } from "@tabler/icons";
 import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
@@ -13,20 +12,17 @@ const config: DocsThemeConfig = {
       width={50}
     />
   ),
+  docsRepositoryBase:
+    "https://github.com/Merlino-Enterprise/isla-documentation",
   project: {
-    link: "https://getisla.com",
-    icon: IconLink,
+    link: "https://github.com/Merlino-Enterprise/isla-documentation",
   },
   chat: {
     icon: null,
   },
-  feedback: {
-    content: null,
-  },
   footer: {
     text: "Your hub to send and receive work requests.",
   },
-  editLink: { component: null },
   useNextSeoProps() {
     const { route } = useRouter();
     if (route !== "/") {
@@ -39,7 +35,6 @@ const config: DocsThemeConfig = {
     const { asPath } = useRouter();
     const config = useConfig();
     const { frontMatter } = config;
-    console.log("asd", config);
     return (
       <>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
